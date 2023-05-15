@@ -14,6 +14,7 @@ export default class ExchangeRateLWC extends LightningElement {
     columns = columns;
     exchangeRateDate;
 
+    //get data from apex controller
     @wire(getExchangeRates)
     fetchExchangeRates({ error, data }) {
         if (data) {

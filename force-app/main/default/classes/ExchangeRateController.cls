@@ -1,5 +1,7 @@
+//controller class to get data
 public with sharing class ExchangeRateController {
 
+    //wrapper class
     public class ExchangeRate {
         @AuraEnabled public String country;
         @AuraEnabled public String currencyName;
@@ -19,6 +21,7 @@ public with sharing class ExchangeRateController {
         }
     }
 
+    //method to make callout and read data
     @AuraEnabled(cacheable=true)
     public static List<ExchangeRate> getExchangeRates() {
         List<ExchangeRate> exchangeRates = new List<ExchangeRate>();

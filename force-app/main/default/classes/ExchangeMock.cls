@@ -1,3 +1,4 @@
+//mock class for test
 @isTest
 public class ExchangeMock implements HttpCalloutMock {
     public HTTPResponse respond(HTTPRequest req) {
